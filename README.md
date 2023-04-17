@@ -11,7 +11,9 @@ create table users (
 `Age` integer
 );
 ```
-Next I started working on the Golang part. Firstly i connected the Golang application to Mysql database and checked whether the connection was successful by pinging the database.
+
+Next I started working on the Golang part. 
+I used github.com/go-sql-driver/mysql to connected the Golang application to Mysql database and checked whether the connection was successful by pinging the database.
 
 ```
 db, err := sql.Open("mysql", "root:mysqlmysql@tcp(127.0.0.1:3306)/mojabaza")
