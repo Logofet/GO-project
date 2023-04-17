@@ -1,6 +1,6 @@
 #Short explanation
 
-In the next project i made a simple web application using Golang and Mysql that allows users to "Create", "Read", "Update" and "Delete" their informations on the database. 
+In this project i made a simple web application using Golang and Mysql that allows users to "Create", "Read", "Update" and "Delete" their informations on the database. 
 First, I made a simple database that takes the users information (ID, Name, Email and Age) with the code below:
 ```
 create database mojabaza;
