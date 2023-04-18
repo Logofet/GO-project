@@ -35,4 +35,4 @@ Finally I make the router listen on port 6969.
 
 In MySql run the above mentioned script. 
 Next, in terminal run: go run main.go
-I tested the implementation using Postman. 
+I tested the implementation using Postman, and added those files that i've tested in the "Postman" folder
