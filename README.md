@@ -34,5 +34,10 @@ Finally I make the router listen on port 6969.
 #How to run
 
 In MySql run the above mentioned script. 
-Next, in terminal run: go run main.go
-I tested the implementation using Postman, and added those files that i've tested in the "Postman" folder
+Next, in terminal run: go run main.go .
+I tested the implementation using Postman, and added those files that i've tested in the "Postman" folder.
+
+Post - you can , add new user by adding "name, "email" and "age" in params and filling the information up.
+Get- you can get information from all users that are stored already exist, or search them individualy.
+Put- you can change users information by typing the ID of the user in the URL, and typing the new information in Body (JSON)
+Delete - you can delete existing user by typing users ID and pressing DELETE
