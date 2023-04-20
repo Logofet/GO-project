@@ -35,7 +35,10 @@ In MySql run the script mentioned above.
 Next, in terminal run: go run main.go .
 I tested the implementation using Postman and added the files that i've tested in the "Postman" folder.
 
-Post - You can add new user by adding "name, "email" and "age" in params and filling the information up.
+Post- You can add new user by adding "name, "email" and "age" in params and filling the information up.
+
 Get- You can get information from all existing users, or search them individualy.
+
 Put- You can change user's information by typing the ID of the user in the URL, and typing the new information in Body (JSON)
-Delete - You can delete an existing user by typing user's ID and pressing DELETE
+
+Delete- You can delete an existing user by typing user's ID and pressing DELETE
