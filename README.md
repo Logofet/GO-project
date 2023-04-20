@@ -1,4 +1,4 @@
-#Short explanation
+2#Short explanation
 
 In this project, I made a simple web application using Golang and MySQL that allows users to "Create", "Read", "Update", and "Delete" their information in the database. Firstly, I created a simple database that takes users' information such as ID, Name, Email, and Age using the code below:
 ```
@@ -29,7 +29,7 @@ if err != nil {
 After that, I created a new router in order to handle the HTTP requests. For path "/users" I handled Get, Post and for "/users/{id}" i handled Put and Delete requests.
 Finally, I made the router listen on port 6969.
 
-#How to run
+2#How to run
 
 In MySql run the script mentioned above. 
 Next, in terminal run: go run main.go .
