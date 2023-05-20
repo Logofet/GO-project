@@ -14,16 +14,16 @@ create table users (
 Next, I started working on the Golang part. I used github.com/go-sql-driver/mysql to connected the Golang application to Mysql database and checked whether the connection was successful by pinging the database.
 
 ```
-db, err := sql.Open("mysql", "root:mysqlmysql@tcp(127.0.0.1:3306)/mojabaza")
-if err != nil {
-	log.Fatal(err)
-}
-defer db.Close()
+database.Db, err = sql.Open("mysql", fmt.Sprintf("%s:%s@tcp(127.0.0.1:3306)/%s", mysqlConfig.Username, mysqlConfig.Password, mysqlConfig.Database))
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer database.Db.Close()
 
-err = db.Ping()
-if err != nil {
-	log.Fatal(err)
-}
+	err = database.Db.Ping()
+	if err != nil {
+		log.Fatal(err)
+	}
 ```
 
 After that, I created a new router in order to handle the HTTP requests. For path "/users" I handled Get, Post and for "/users/{id}" i handled Put and Delete requests.
