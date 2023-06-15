@@ -1,7 +1,8 @@
 package main
 
 import (
-	"Projekat/database"
+	"Projekat/http"
+	"Projekat/models"
 	"database/sql"
 	"fmt"
 	"log"
@@ -36,16 +37,20 @@ func main() {
 		return
 	}
 
-	database.Db, err = sql.Open("mysql", fmt.Sprintf("%s:%s@tcp(127.0.0.1:3306)/%s", mysqlConfig.Username, mysqlConfig.Password, mysqlConfig.Database))
+	db, err := sql.Open("mysql", fmt.Sprintf("%s:%s@tcp(127.0.0.1:3306)/%s", mysqlConfig.Username, mysqlConfig.Password, mysqlConfig.Database))
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer database.Db.Close()
+	defer db.Close()
 
-	err = database.Db.Ping()
+	err = db.Ping()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	httpServer(database.Db)
+	userModel := &models.UserModel{DB: db}
+	err = http.HttpServer(userModel)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
